@@ -12,6 +12,8 @@ appdaemon/apps-data/temperature.csv
 
 # navidrome cache
 navidrome/data/cache/
+navidrome/data/*.db-wal
+navidrome/data/*.db-shm
 
 # homarr
 homarr/appdata/redis/dump.rdb
