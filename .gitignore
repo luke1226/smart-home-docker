@@ -12,6 +12,7 @@ appdaemon/apps-data/temperature.csv
 
 # navidrome cache
 navidrome/data/cache/
+navidrome/data/*.db
 navidrome/data/*.db-wal
 navidrome/data/*.db-shm
 
