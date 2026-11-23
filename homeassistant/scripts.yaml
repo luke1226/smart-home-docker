@@ -1,0 +1,18 @@
+zwieksz_wartosc:
+  alias: Increase ground floor temperature 0.1
+  sequence:
+  - action: input_number.set_value
+    target:
+      entity_id: input_number.desired_ground_floor_temperature
+    data:
+      value: '{{ [states(''input_number.desired_ground_floor_temperature'') | float(20.5)
+        + 0.1, 22.0] | min }}'
+decrease_ground_floor_temperature_0_1:
+  alias: Decrease ground floor temperature 0.1
+  sequence:
+  - action: input_number.set_value
+    target:
+      entity_id: input_number.desired_ground_floor_temperature
+    data:
+      value: '{{ [states(''input_number.desired_ground_floor_temperature'') | float(20.5)
+        - 0.1, 22.0] | min }}'

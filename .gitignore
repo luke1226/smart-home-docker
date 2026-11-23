@@ -1,0 +1,47 @@
+# Bazy danych Home Assistanta i pliki tymczasowe SQLite
+homeassistant/*.db
+homeassistant/*.db-wal
+homeassistant/*.db-shm
+homeassistant/*.db-journal
+homeassistant/.storage/
+homeassistant/secrets.yaml
+
+# appdatemon heater csv logs
+appdaemon/apps-data/heater.csv
+appdaemon/apps-data/temperature.csv
+
+# navidrome cache
+navidrome/data/cache/
+
+# homarr
+homarr/appdata/redis/dump.rdb
+
+# nginx
+nginx/data/logs/*.log
+nginx/data/logs/*.log.*
+nginx/data/logs/*.gz
+
+# jellyfin
+jellyfin/config/data/data/ScheduledTasks/
+
+# Logi i kopie zapasowe
+*.log
+*.bak
+*.tmp
+*.zip
+*.tar
+*.tar.gz
+*.gz
+
+# Zmienne środowiskowe i sekrety
+.env
+.env.*
+secrets.yaml
+
+# Cache, tymczasowe katalogi i pliki systemowe
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+EOF
+homarr/appdata/redis/dump.rdb

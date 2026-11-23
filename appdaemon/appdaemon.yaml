@@ -1,0 +1,16 @@
+appdaemon:
+  latitude: 0
+  longitude: 0
+  elevation: 30
+  time_zone: Europe/Berlin
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.178.97:8123
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjMDRhNDgyNTZiMjQ0MTBhOWJlZDJiZmQ1YmE3YThhMyIsImlhdCI6MTc5MjQ0MjI4NSwiZXhwIjoyMTA3ODAyMjg1fQ.69bQhSyfFGNdvevvx-NbjNB_NLkbeFZ9ZDvg-ig8tAM
+      cert_verify: False
+http:
+  url: http://0.0.0.0:5050
+admin:
+api:
+hadashboard:
