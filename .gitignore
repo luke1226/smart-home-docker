@@ -27,6 +27,8 @@ nginx/data/logs/*.gz
 # jellyfin
 jellyfin/config/data/data/ScheduledTasks/
 
+# yt-app
+
 # Logi i kopie zapasowe
 *.log
 *.bak
