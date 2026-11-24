@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+# Instalacja narzędzi systemowych (ffmpeg, nodejs dla yt-dlp oraz docker cli, żeby kontener mógł wydawać polecenia docker-compose)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    ffmpeg \
+    nodejs \
+    npm \
+    docker.io \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Instalacja wymaganych bibliotek Pythona
+RUN pip install --no-cache-dir flask yt-dlp
+
+# Kopiujemy aplikację
+COPY app.py /app/app.py
+
+EXPOSE 5000
+
+CMD ["python3", "app.py"]

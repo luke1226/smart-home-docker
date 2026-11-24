@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  ytdlp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /srv/disk0/Music/Mp3:/downloads
+      - .:/app
+    command: "--help"
+
+  web-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8099:5000"
+    volumes:
+      - /srv/disk0/Music/Mp3:/srv/music
+      - /var/run/docker.sock:/var/run/docker.sock
+      - .:/app
+    restart: unless-stopped
