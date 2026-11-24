@@ -43,8 +43,6 @@ secrets.yaml
 
 # Cache, tymczasowe katalogi i pliki systemowe
 __pycache__/
-*.py[cod]
 .DS_Store
 Thumbs.db
 EOF
-homarr/appdata/redis/dump.rdb
